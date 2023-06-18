@@ -2,6 +2,7 @@ import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
 plugins {
     kotlin("jvm") version "1.8.20"
+    kotlin("plugin.serialization") version "1.8.20"
     id("org.jlleitschuh.gradle.ktlint") version "11.3.1"
     checkstyle
 }
@@ -14,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     testImplementation(kotlin("test"))
 }
